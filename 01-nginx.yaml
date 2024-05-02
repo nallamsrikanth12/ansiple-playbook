@@ -11,4 +11,7 @@
       name: nginx
       state: started
       enabled: yes
-
+  - name: install mysql
+    ansible.builtin.dnf:
+      name: mysql
+      state: latest
