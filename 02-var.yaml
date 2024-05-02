@@ -1,0 +1,10 @@
+- name: varibles
+  hosts: localhost
+  vars:
+    movie: "thammudu"
+    price: "150"
+    durartion: "120 min"
+  tasks:
+  - name: print above information
+    ansible.builtin.debug:
+      msg: "movie name is {{movie}} and price is {{price}} and duration of the movie is {{duration}}"
