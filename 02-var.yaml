@@ -3,7 +3,7 @@
   vars:
     movie: "thammudu"
     price: "150"
-    durartion: "120 min"
+    duration: "120 min"
   tasks:
   - name: print above information
     ansible.builtin.debug:
