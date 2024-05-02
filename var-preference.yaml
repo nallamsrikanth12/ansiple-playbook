@@ -1,0 +1,16 @@
+- name: variable perenference
+  hosts: localhost
+  vars:
+    wishes: good morning from play task
+  vars_files:
+  -vars.yaml
+  vars_prompt:
+  - name: wishes
+    prompt: enter the wishes
+    private: false
+  tasks:
+    - name: check preference
+      vars:
+        wishes: "morning from task variable"
+      ansible.builtin.debug:
+        msg: "hello good {{wishes}}"
