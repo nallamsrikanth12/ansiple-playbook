@@ -3,7 +3,7 @@
   vars:
     wishes: good morning from play task
   vars_files:
-  -vars.yaml
+  - vars.yaml
   vars_prompt:
   - name: wishes
     prompt: enter the wishes
