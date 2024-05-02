@@ -1,0 +1,13 @@
+- name: play level
+  host: localhost
+  vars:
+    course: "devops"
+    trainer: "siva"
+    duration: "120hr"
+  tasks:
+  - name: task level
+    ansible.builtin.debug:
+    vars:
+      corse: "terraform"
+    ansible.builtin.debug:
+      msg: "hii, course name is {{course}} and trainer is {{trainer}} and duration is {{duration}}"
