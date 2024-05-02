@@ -5,4 +5,4 @@
   tasks:
   - name: variables
     ansible.builtin.debug:
-      msg: "movie name {{movie}} and director of the movie is {{director}} and  budget of movie is {{budget}}"
+      msg: "movie name is {{movie}} and director of the movie is {{director}} and  budget of movie is {{budget}}"
