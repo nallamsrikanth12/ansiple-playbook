@@ -1,16 +1,16 @@
-- name: play level
-  host: localhost
+- name: variables
+  hosts: localhost
   vars:
-    course: "devops"
+    course: "terraform"
     trainer: "siva"
     duration: "120hr"
   tasks:
-  - name: task level
+  - name: print override information
     vars:
-      corse: "terraform"
+      course: "devops"
     ansible.builtin.debug:
-      msg: "hii, course name is {{course}} and trainer is {{trainer}} and duration is {{duration}}"
-
-   - name: print information
-     ansible.builtin.debug:
-      msg: "hii, course name is {{course}} and trainer is {{trainer}} and duration is {{duration}}"
+      msg: "hii this is srikanth  course is {{course}} and trainer is {{trainer}} and duration is {{duration}}"
+  
+  - name: print  information
+    ansible.builtin.debug:
+      msg: "hii this is srikanth  course is {{course}} and trainer is {{trainer}} and duration is {{duration}}"     
