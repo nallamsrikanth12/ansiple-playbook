@@ -4,9 +4,8 @@
   tasks:
   - name: check the user exists or not
     ansible.builtin.command: id expense
-    register: user
     handle_error: true
-  - name: check the user info
+  
+  - name: say hii
     ansible.builtin.debug:
-      msg: "check the user info: {{user}}"
-      
+      msg: "say helo"
