@@ -2,7 +2,6 @@
   hosts: web
   become: yes
   tasks:
-  - name: check the user exists or not
+  - name: check the user exist or not
     ansible.builtin.command: id expense
-    ignore_error: true
-
+    
