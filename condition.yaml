@@ -1,0 +1,6 @@
+- name: conditions
+  hosts: web
+  tasks:
+  - name: check the user exists or not
+    ansible.builtin.command: id expense
+    
