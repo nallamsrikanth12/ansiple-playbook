@@ -1,5 +1,6 @@
 - name: conditions
   hosts: web
+  become: yes
   tasks:
   - name: check the user exists or not
     ansible.builtin.command: id expense
@@ -8,3 +9,4 @@
   - name: check the user info
     ansible.builtin.debug:
       msg: "check the user info: {{user}}"
+      
