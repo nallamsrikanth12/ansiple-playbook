@@ -1,16 +1,15 @@
----
 - name: conditions
   hosts: localhost
   vars_prompt:
-    - name: NUMBER
-      prompt: enter the number
+    - name: number
+      prompt: "Enter the number"
       private: false
   tasks:
     - name: print the less than number
       ansible.builtin.debug:
-        msg: number is less than  {{NUMBER}}
+        msg: "Number is less than {{ number }}"
       when: number | int < 10
-    - name: print the greater than is equal to
+    - name: print the greater than or equal to number
       ansible.builtin.debug:
-        msg: number is greater than equal to {{NUMBER}}
+        msg: "Number is greater than or equal to {{ number }}"
       when: number | int >= 10
