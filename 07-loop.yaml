@@ -33,5 +33,5 @@
       state: "{{list.state}}"
     loop:
     - { name: 'nodejs', state: 'latest' }
-    - { name: 'mysql',  state: 'absent'}
-    - { name: 'nginx',  state: 'absent'}
+    - { name: 'mysql',  state: 'absent' }
+    - { name: 'nginx',  state: 'absent' }
