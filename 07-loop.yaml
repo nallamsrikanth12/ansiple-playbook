@@ -21,3 +21,18 @@
     - nodejs
     - mysql
     - nginx
+
+
+- name: install and remove 
+  hosts: localhost
+  become: yes
+  tasks:
+  - name: install and remove
+    ansible.builtin.dnf:
+      name: "{{list.name}}"
+      state: "{{list.state}}"
+      state:
+    loop:
+    - { name: 'nodejs', state: 'latest' }
+    - { name: 'mysql',  state: 'absent'}
+    - { name: 'nginx',  state: 'absent'}
