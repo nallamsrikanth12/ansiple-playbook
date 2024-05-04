@@ -38,4 +38,4 @@
   tasks:
   - name: remove the duplicates
     ansible.builtin.debug:
-      msg: "remove the extra dulicates in my list {{numbers}}"
+      msg: "remove the extra dulicates in my list {{numbers | unique}}"
