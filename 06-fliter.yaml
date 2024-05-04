@@ -22,7 +22,7 @@
 - name: lowercase
   hosts: localhost
   vars:
-    week: "TODAY IS SUNDAY"
+    week: "today is sunday"
   tasks:
   - name: convert into lowercase
     ansible.builtin.debug:
