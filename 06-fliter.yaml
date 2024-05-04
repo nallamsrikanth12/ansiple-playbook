@@ -16,3 +16,14 @@
     - name: convert in to uppercase
       ansible.builtin.debug:
         msg: " today is srikanth {{wishes | upper}}"
+
+# coverted into lowercase
+
+- name: lowercase
+  hosts: localhost
+  vars:
+    week: "TODAY IS SUNDAY"
+  tasks:
+  - name: convert into lowercase
+    ansible.builtin.debug:
+      msg: "hii, {{week | lower}}"
