@@ -14,8 +14,9 @@
   become: yes
   tasks:
   - name: install packages
-    ansible.builtin.debug:
-      msg: "install the packages {{list}}"
+    ansible.builtin.dnf:
+      name: "{{list}}"
+      state: latest
     loop:
     - nodejs
     - mysql
