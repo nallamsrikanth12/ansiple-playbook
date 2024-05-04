@@ -1,6 +1,18 @@
+# set the default value
 - name: default value
   hosts: localhost
   tasks:
   - name: print the default value
     ansible.builtin.debug:
       msg: "course is {{couse | default ('ansible')}}"
+
+# convert in to uppercase
+
+- name: uppercase
+  hosts: localhost
+  vars:
+    wishes: "happy birtday"
+  tasks:
+    - name: convert in to uppercase
+      ansible.builtin.debug:
+        msg: " today is srikanth {{wishes | upper}}"
