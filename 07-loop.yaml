@@ -8,3 +8,14 @@
     - mysql
     - nodejs
     - python
+
+- name: install the packages
+  hosts: localhost
+  tasks:
+  - name: install packages
+    ansible.builtin.debug:
+      msg: "install the packages {{list}}"
+    loop:
+    - nodejs
+    - mysql
+    - nginx
