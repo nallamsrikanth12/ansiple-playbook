@@ -64,3 +64,21 @@
   - name: converted into dictionaty to items
     ansible.builtin.debug:
       msg: "panindia movie details is {{my_dict | dict2items}}"
+
+# this is output of  dictionaty to items
+#[{'key': 'movie', 'value': 'rrr'}, 
+#{'key': 'heros', 'value': 'ntr and ramcharan'},
+#{'key': 'ticket', 'value': 150}]"
+
+# converted into items to dictinary
+
+- name: converted into items to dictinary
+  hosts: localhost
+  vars:
+  - {'key': 'movie', 'value': 'rrr'}
+  - {'key': 'heros', 'value': 'ntr and ramcharan'}
+  - {'key': 'ticket', 'value': 150}
+  tasks:
+  - name: converted into items to dictinary
+    ansible.builtin.debug:
+      msg: {{items2dict}}
