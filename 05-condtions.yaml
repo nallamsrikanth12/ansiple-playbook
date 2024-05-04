@@ -11,5 +11,5 @@
 
   - name: print the greater than is equal to
     ansible.builtin.debug:
-      msg: "number is greater than equal to {{NUMBER}}
+      msg: "number is greater than equal to {{NUMBER}}"
     when: number > 10
