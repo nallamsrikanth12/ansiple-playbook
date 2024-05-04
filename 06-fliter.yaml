@@ -83,3 +83,12 @@
   - name: converted into items to dictinary
     ansible.builtin.debug:
       msg: "{{lists | items2dict}}"
+
+# this is output of converted into items to dictinary
+#   {
+#         "heros": "ntr and ramcharan",
+#         "movie": "rrr",
+#         "ticket": 150
+#     }
+# }
+
