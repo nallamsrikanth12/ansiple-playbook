@@ -27,3 +27,15 @@
   - name: convert into lowercase
     ansible.builtin.debug:
       msg: "hii, {{week | lower}}"
+
+
+# REMOVE DUPLICATES
+
+- name: remove duplicates
+  hosts: localhost
+  vars:
+    numbers: [1,2,2,2,3,3,3,4,4,5]
+  tasks:
+  - name: remove the duplicates
+    ansible.builtin.debug:
+      msg: "remove the extra dulicates in my list {{numbers}}"
