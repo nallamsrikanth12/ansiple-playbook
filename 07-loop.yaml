@@ -31,7 +31,6 @@
     ansible.builtin.dnf:
       name: "{{list.name}}"
       state: "{{list.state}}"
-      state:
     loop:
     - { name: 'nodejs', state: 'latest' }
     - { name: 'mysql',  state: 'absent'}
