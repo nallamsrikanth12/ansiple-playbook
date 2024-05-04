@@ -76,9 +76,9 @@
   hosts: localhost
   vars:
     lists:
-  - {'key': 'movie', 'value': 'rrr'}
-  - {'key': 'heros', 'value': 'ntr and ramcharan'}
-  - {'key': 'ticket', 'value': 150}
+    - {'key': 'movie', 'value': 'rrr'}
+    - {'key': 'heros', 'value': 'ntr and ramcharan'}
+    - {'key': 'ticket', 'value': 150}
   tasks:
   - name: converted into items to dictinary
     ansible.builtin.debug:
