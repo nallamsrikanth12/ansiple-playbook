@@ -75,10 +75,11 @@
 - name: converted into items to dictinary
   hosts: localhost
   vars:
+    lists:
   - {'key': 'movie', 'value': 'rrr'}
   - {'key': 'heros', 'value': 'ntr and ramcharan'}
   - {'key': 'ticket', 'value': 150}
   tasks:
   - name: converted into items to dictinary
     ansible.builtin.debug:
-      msg: "{{items2dict}}"
+      msg: "{{lists | items2dict}}"
