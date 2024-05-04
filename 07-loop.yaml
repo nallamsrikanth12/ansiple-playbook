@@ -15,7 +15,7 @@
   tasks:
   - name: install packages
     ansible.builtin.dnf:
-      name: "{{list}}"
+      name: "{{item}}"
       state: latest
     loop:
     - nodejs
