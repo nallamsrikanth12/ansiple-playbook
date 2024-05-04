@@ -56,11 +56,11 @@
 - name: dictionaty to items
   hosts: localhost
   vars:
-    my_dict: #this id dict/map/key=value
+    my_dict: #this is dict/map/key=value
       movie: rrr
       heros: ntr and ramcharan
       ticket: 150
   tasks:
   - name: converted into dictionaty to items
-    ansible.builtin.ebug:
+    ansible.builtin.debug:
       msg: "panindia movie details is {{my_dict | dict2items}}"
