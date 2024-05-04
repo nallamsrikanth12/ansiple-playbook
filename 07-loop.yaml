@@ -29,8 +29,8 @@
   tasks:
   - name: install and remove
     ansible.builtin.dnf:
-      name: "{{list.name}}"
-      state: "{{list.state}}"
+      name: "{{ list.name }}"
+      state: "{{ list.state }}"
     loop:
     - { name: 'nodejs', state: 'latest' }
     - { name: 'mysql',  state: 'absent' }
