@@ -81,4 +81,4 @@
   tasks:
   - name: converted into items to dictinary
     ansible.builtin.debug:
-      msg: {{items2dict}}
+      msg: "{{items2dict}}"
