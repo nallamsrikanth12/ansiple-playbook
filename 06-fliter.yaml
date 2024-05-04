@@ -49,4 +49,18 @@
   tasks:
   - name: print the min and max
     ansible.builtin.debug:
-      msg: "{min age is {{ages | min}} and max age is {{ages | max}}"
+      msg: "{min age is {{ages | min}} and max age is  {{ages | max}}"
+
+# converted into dictionaty to items
+
+- name: dictionaty to items
+  hosts: localhost
+  vars:
+    my_dict: #this id dict/map/key=value
+      movie: rrr
+      heros: ntr and ramcharan
+      ticket: 150
+  tasks:
+  - name: converted into dictionaty to items
+    ansible.builtin.ebug:
+      msg: "panindia movie details is {{my_dict | dict2items}}"
