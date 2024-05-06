@@ -2,6 +2,6 @@
   hosts: localhost
   tasks: 
     - name: command module
-      ansible.builtin.command: "echo this is srikanth > /tmp/command.txt"
+      ansible.builtin.command: "echo this is srikanth > /tmp/command.txt" # this is will not because command module should not work redirectitories and pipes and variable
     - name: shell module
-      ansible.builtin.shell: "echo this is srikanth > /tmp/shell.txt"
+      ansible.builtin.shell: "echo this is srikanth > /tmp/shell.txt" # shell module is work with variables,redirectories,pipes
